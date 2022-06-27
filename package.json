@@ -10,9 +10,15 @@
     "prepare": "husky install"
   },
   "dependencies": {
-    "vue": "^3.2.25"
+    "codemirror": "^6.0.0",
+    "crypto-js": "^4.1.1",
+    "fireworks-js": "^1.4.0",
+    "uuid": "^8.3.2",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.16"
   },
   "devDependencies": {
+    "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "@vitejs/plugin-vue": "^2.3.3",
