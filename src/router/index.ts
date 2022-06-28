@@ -6,6 +6,11 @@ const routes = [
     name: 'Home',
     component: () => import('../views/AboutView.vue'),
   },
+  {
+    path: '/hash-generator',
+    name: 'HashGenerator',
+    component: () => import('../views/HashGenerator.vue'),
+  },
 ];
 
 export const router = VueRouter.createRouter({

@@ -17,7 +17,10 @@
 <script setup lang="ts">
 import SideBarMenu from '@/components/side-bar/SideBarMenu.vue';
 
-const items = [{ label: 'About', to: { name: 'Home' } }];
+const items = [
+  { label: 'About', to: { name: 'Home' } },
+  { label: 'HashGenerator', to: { name: 'HashGenerator' } },
+];
 </script>
 
 <style scoped></style>
