@@ -7,7 +7,19 @@
         </div>
         <DarkModeToggle />
       </div>
-      <SideBarMenu v-for="item in items" :key="item.label" :item="item" />
+      <div class="px-6 mt-5">
+        <SideBarMenu :item="{ label: 'About', to: { name: 'About' } }" />
+      </div>
+      <SideBarAccordion :label="'Dev Tools'">
+        <div class="flex flex-col">
+          <SideBarMenu
+            v-for="item in devTools"
+            :key="item.label"
+            :item="item"
+            class="ml-2"
+          />
+        </div>
+      </SideBarAccordion>
     </div>
   </div>
 </template>
@@ -15,11 +27,9 @@
 <script setup lang="ts">
 import SideBarMenu from '@/components/side-bar/SideBarMenu.vue';
 import DarkModeToggle from './DarkModeToggle.vue';
+import SideBarAccordion from './SideBarAccordion.vue';
 
-const items = [
-  { label: 'About', to: { name: 'Home' } },
-  { label: 'HashGenerator', to: { name: 'HashGenerator' } },
-];
+const devTools = [{ label: 'HashGenerator', to: { name: 'HashGenerator' } }];
 </script>
 
 <style scoped></style>

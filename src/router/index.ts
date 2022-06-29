@@ -3,7 +3,7 @@ import * as VueRouter from 'vue-router';
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'About',
     component: () => import('../views/AboutView.vue'),
   },
   {
