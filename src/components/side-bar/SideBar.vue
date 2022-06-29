@@ -5,8 +5,6 @@
         <div class="text-2xl font-bold text-gray-900 dark:text-gray-300">
           Shiotomo Dev Tools
         </div>
-      </div>
-      <div>
         <DarkModeToggle />
       </div>
       <SideBarMenu v-for="item in items" :key="item.label" :item="item" />
@@ -16,6 +14,7 @@
 
 <script setup lang="ts">
 import SideBarMenu from '@/components/side-bar/SideBarMenu.vue';
+import DarkModeToggle from './DarkModeToggle.vue';
 
 const items = [
   { label: 'About', to: { name: 'Home' } },
