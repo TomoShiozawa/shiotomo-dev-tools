@@ -27,8 +27,8 @@
 import { ref } from 'vue';
 import CryptoJS from 'crypto-js';
 
-import AtomTextArea from '../parts/AtomTextArea.vue';
-import AtomButton from '../parts/AtomButton.vue';
+import AtomTextArea from '../atoms/AtomTextArea.vue';
+import AtomButton from '../atoms/AtomButton.vue';
 
 const plainText = ref('');
 const hashDigest = ref('');
