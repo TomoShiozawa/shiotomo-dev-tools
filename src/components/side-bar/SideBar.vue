@@ -29,7 +29,10 @@ import SideBarMenu from '@/components/side-bar/SideBarMenu.vue';
 import DarkModeToggle from './DarkModeToggle.vue';
 import SideBarAccordion from './SideBarAccordion.vue';
 
-const devTools = [{ label: 'HashGenerator', to: { name: 'HashGenerator' } }];
+const devTools = [
+  { label: 'HashGenerator', to: { name: 'HashGenerator' } },
+  { label: 'UUIDGenerator', to: { name: 'UUIDGenerator' } },
+];
 </script>
 
 <style scoped></style>

@@ -11,6 +11,11 @@ const routes = [
     name: 'HashGenerator',
     component: () => import('../views/HashGenerator.vue'),
   },
+  {
+    path: '/uuid-generator',
+    name: 'UUIDGenerator',
+    component: () => import('../views/UUIDGenerator.vue'),
+  },
 ];
 
 export const router = VueRouter.createRouter({
