@@ -19,7 +19,6 @@ import { ref } from 'vue';
 import { v4 as uuidv4 } from 'uuid';
 
 import AtomButton from '../atoms/AtomButton.vue';
-import AtomTextArea from '../atoms/AtomTextArea.vue';
 import AtomInput from '../atoms/AtomInput.vue';
 
 const uuid = ref('');
