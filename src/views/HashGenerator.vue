@@ -6,8 +6,12 @@
       </h2>
       <div class="flex flex-col items-center mt-5">
         <div class="sm:w-full md:w-1/2">
-          <h2 class="text-xl text-gray-600 dark:text-gray-300">元のテキスト</h2>
-          <AtomTextArea v-model:value="plainText" />
+          <label
+            for="plain-text"
+            class="text-xl text-gray-600 dark:text-gray-300"
+            >元のテキスト</label
+          >
+          <AtomTextArea :id="'plain-text'" v-model:value="plainText" />
         </div>
         <div class="gap-4 sm:flex sm:w-full md:w-1/2">
           <AtomButton :label="'MD5'" @click="md5Digest" />
@@ -15,8 +19,12 @@
           <AtomButton :label="'SHA-512'" @click="sha512Digest" />
         </div>
         <div class="mt-5 sm:w-full md:w-1/2">
-          <h2 class="text-xl text-gray-600 dark:text-gray-300">Hash値</h2>
-          <AtomTextArea v-model:value="hashDigest" />
+          <label
+            for="hash-digest"
+            class="text-xl text-gray-600 dark:text-gray-300"
+            >Hash値</label
+          >
+          <AtomTextArea :id="'hash-digest'" v-model:value="hashDigest" />
         </div>
       </div>
     </div>
