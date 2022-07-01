@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "buffer": "^6.0.3",
     "codemirror": "^6.0.0",
     "crypto-js": "^4.1.1",
     "fireworks-js": "^1.4.0",

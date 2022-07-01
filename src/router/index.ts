@@ -16,6 +16,11 @@ const routes = [
     name: 'UUIDGenerator',
     component: () => import('../views/UUIDGenerator.vue'),
   },
+  {
+    path: '/base64-encoder',
+    name: 'Base64Encoder',
+    component: () => import('../views/Base64Encoder.vue'),
+  },
 ];
 
 export const router = VueRouter.createRouter({

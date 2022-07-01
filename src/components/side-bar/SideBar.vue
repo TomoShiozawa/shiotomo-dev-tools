@@ -32,6 +32,7 @@ import SideBarAccordion from './SideBarAccordion.vue';
 const devTools = [
   { label: 'HashGenerator', to: { name: 'HashGenerator' } },
   { label: 'UUIDGenerator', to: { name: 'UUIDGenerator' } },
+  { label: 'Base64Encoder', to: { name: 'Base64Encoder' } },
 ];
 </script>
 
