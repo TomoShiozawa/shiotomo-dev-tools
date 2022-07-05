@@ -6,13 +6,11 @@
       </h2>
       <div class="flex flex-col items-center mt-5">
         <div class="sm:w-full md:w-1/2">
-          <label
-            for="plain-text"
-            class="text-xl text-gray-600 dark:text-gray-300"
-          >
-            元のテキスト
-          </label>
-          <AtomTextArea :id="'plain-text'" v-model:value="plainText" />
+          <InputTextArea
+            id="'plain-text'"
+            v-model:value="plainText"
+            :label="'元のテキスト'"
+          />
         </div>
         <div class="gap-4 sm:flex sm:w-full md:w-1/2">
           <AtomButton :label="'MD5'" @click="md5Digest" />
@@ -20,13 +18,11 @@
           <AtomButton :label="'SHA-512'" @click="sha512Digest" />
         </div>
         <div class="mt-5 sm:w-full md:w-1/2">
-          <label
-            for="hash-digest"
-            class="text-xl text-gray-600 dark:text-gray-300"
-          >
-            Hash値
-          </label>
-          <AtomTextArea :id="'hash-digest'" v-model:value="hashDigest" />
+          <InputTextArea
+            id="'plain-text'"
+            v-model:value="hashDigest"
+            :label="'Hash値'"
+          />
         </div>
       </div>
     </div>
@@ -37,8 +33,8 @@
 import { ref } from 'vue';
 import CryptoJS from 'crypto-js';
 
-import AtomTextArea from '../atoms/AtomTextArea.vue';
 import AtomButton from '../atoms/AtomButton.vue';
+import InputTextArea from '../molecules/InputTextArea.vue';
 
 const plainText = ref('');
 const hashDigest = ref('');

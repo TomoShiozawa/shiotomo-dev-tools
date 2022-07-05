@@ -7,10 +7,12 @@
         ルーレット
       </h2>
       <div class="col-span-1">
-        <label for="item-text" class="text-xl text-gray-600 dark:text-gray-300">
-          アイテムの入力（改行区切り）
-        </label>
-        <AtomTextArea :id="'item-text'" v-model:value="itemText" :rows="20" />
+        <InputTextArea
+          :id="'item-text'"
+          v-model:value="itemText"
+          :label="'アイテムの入力（改行区切り）'"
+          :rows="20"
+        />
         <AtomButton v-if="!isRunning" :label="'START'" @click="start" />
         <AtomButton v-if="isRunning" :label="'STOP'" @click="stop" />
       </div>
@@ -22,7 +24,7 @@
             class="flex justify-center items-center font-bold text-center text-gray-600 dark:text-gray-300"
             :class="{ 'border-4 border-cyan-300': isSelected(index) }"
           >
-            {{ item }}
+            <p class="break-all">{{ item }}</p>
           </div>
         </div>
       </div>
@@ -33,8 +35,8 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 
-import AtomTextArea from '../../atoms/AtomTextArea.vue';
 import AtomButton from '../../atoms/AtomButton.vue';
+import InputTextArea from '../../molecules/InputTextArea.vue';
 
 const itemText = ref('');
 const items = computed(() => itemText.value.split('\n'));

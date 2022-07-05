@@ -6,26 +6,18 @@
       </h2>
       <div class="flex flex-col items-center mt-5">
         <div class="sm:w-full md:w-1/2">
-          <label
-            for="plain-text"
-            class="text-xl text-gray-600 dark:text-gray-300"
-            >元のテキスト</label
-          >
-          <AtomTextArea
+          <InputTextArea
             :id="'plain-text'"
             v-model:value="plainText"
+            :label="'元のテキスト'"
             @input="encode"
           />
         </div>
         <div class="sm:w-full md:w-1/2">
-          <label
-            for="base64-encoded"
-            class="text-xl text-gray-600 dark:text-gray-300"
-            >Base64 Encoded</label
-          >
-          <AtomTextArea
+          <InputTextArea
             :id="'base64-encoded'"
             v-model:value="base64Encoded"
+            :label="'Base64 Encoded'"
             @input="decode"
           />
         </div>
@@ -37,7 +29,7 @@
 <script setup lang="ts">
 import { Buffer } from 'buffer';
 import { ref } from 'vue';
-import AtomTextArea from '../atoms/AtomTextArea.vue';
+import InputTextArea from '../molecules/InputTextArea.vue';
 
 const plainText = ref('');
 const base64Encoded = ref('');
