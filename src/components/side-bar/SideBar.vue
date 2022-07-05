@@ -20,6 +20,16 @@
           />
         </div>
       </SideBarAccordion>
+      <SideBarAccordion :label="'Other Tools'">
+        <div class="flex flex-col">
+          <SideBarMenu
+            v-for="item in otherTools"
+            :key="item.label"
+            :item="item"
+            class="ml-2"
+          />
+        </div>
+      </SideBarAccordion>
     </div>
   </div>
 </template>
@@ -30,10 +40,12 @@ import DarkModeToggle from './DarkModeToggle.vue';
 import SideBarAccordion from './SideBarAccordion.vue';
 
 const devTools = [
-  { label: 'HashGenerator', to: { name: 'HashGenerator' } },
-  { label: 'UUIDGenerator', to: { name: 'UUIDGenerator' } },
-  { label: 'Base64Encoder', to: { name: 'Base64Encoder' } },
+  { label: 'Hash Generator', to: { name: 'HashGenerator' } },
+  { label: 'UUID Generator', to: { name: 'UUIDGenerator' } },
+  { label: 'Base64 Encoder', to: { name: 'Base64Encoder' } },
 ];
+
+const otherTools = [{ label: 'Roulette', to: { name: 'Roulette' } }];
 </script>
 
 <style scoped></style>

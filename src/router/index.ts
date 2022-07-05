@@ -21,6 +21,11 @@ const routes = [
     name: 'Base64Encoder',
     component: () => import('../views/Base64Encoder.vue'),
   },
+  {
+    path: '/roulette',
+    name: 'Roulette',
+    component: () => import('../views/other-tools/SimpleRoulette.vue'),
+  },
 ];
 
 export const router = VueRouter.createRouter({

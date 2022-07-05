@@ -9,8 +9,9 @@
           <label
             for="plain-text"
             class="text-xl text-gray-600 dark:text-gray-300"
-            >元のテキスト</label
           >
+            元のテキスト
+          </label>
           <AtomTextArea :id="'plain-text'" v-model:value="plainText" />
         </div>
         <div class="gap-4 sm:flex sm:w-full md:w-1/2">
@@ -22,8 +23,9 @@
           <label
             for="hash-digest"
             class="text-xl text-gray-600 dark:text-gray-300"
-            >Hash値</label
           >
+            Hash値
+          </label>
           <AtomTextArea :id="'hash-digest'" v-model:value="hashDigest" />
         </div>
       </div>
