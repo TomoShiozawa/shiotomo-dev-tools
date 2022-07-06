@@ -43,6 +43,7 @@ const devTools = [
   { label: 'Hash Generator', to: { name: 'HashGenerator' } },
   { label: 'UUID Generator', to: { name: 'UUIDGenerator' } },
   { label: 'Base64 Encoder', to: { name: 'Base64Encoder' } },
+  { label: 'Base Converter', to: { name: 'BaseConverter' } },
 ];
 
 const otherTools = [{ label: 'Roulette', to: { name: 'Roulette' } }];

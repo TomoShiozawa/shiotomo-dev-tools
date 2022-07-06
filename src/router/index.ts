@@ -22,6 +22,11 @@ const routes = [
     component: () => import('../views/Base64Encoder.vue'),
   },
   {
+    path: '/base-converter',
+    name: 'BaseConverter',
+    component: () => import('../views/BaseConverter.vue'),
+  },
+  {
     path: '/roulette',
     name: 'Roulette',
     component: () => import('../views/other-tools/SimpleRoulette.vue'),

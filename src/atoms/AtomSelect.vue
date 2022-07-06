@@ -1,21 +1,24 @@
 <template>
-  <AtomLabel :for-id="id" :label="label" />
-  <AtomInput
+  <select
     :id="id"
-    v-model:value="innerValue"
-    :type="type"
-    :placeholder="placeholder"
+    v-model="selected"
     class="py-1 px-3 w-full text-base leading-8 text-gray-700 dark:text-gray-300 bg-white dark:bg-slate-600 rounded border border-gray-300 focus:border-indigo-500 dark:border-gray-500 outline-none focus:ring-2 focus:ring-indigo-200 transition-colors ease-in-out"
-    @input="handleInput"
-  />
+  >
+    <option v-for="item in items" :key="item.value" :value="item.value">
+      {{ item.label }}
+    </option>
+  </select>
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
-import AtomLabel from '../atoms/AtomLabel.vue';
-import AtomInput from '../atoms/AtomInput.vue';
+import { computed, PropType } from 'vue';
 
-const innerValue = computed({
+export type Item = {
+  label: string;
+  value: string | number;
+};
+
+const selected = computed({
   get: () => {
     return props.value;
   },
@@ -26,17 +29,11 @@ const innerValue = computed({
 
 const props = defineProps({
   id: { type: String, default: '' },
-  label: { type: String, default: '' },
-  type: { type: String, default: 'text' },
-  placeholder: { type: String, default: '' },
+  items: { type: Array as PropType<Item[]>, default: () => [] },
   value: { type: [String, Number], default: '' },
 });
 
-const emit = defineEmits(['update:value', 'input']);
-
-const handleInput = () => {
-  emit('input');
-};
+const emit = defineEmits(['update:value']);
 </script>
 
 <style scoped></style>
