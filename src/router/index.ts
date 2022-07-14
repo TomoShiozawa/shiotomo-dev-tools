@@ -31,6 +31,11 @@ const routes = [
     name: 'Roulette',
     component: () => import('../views/other-tools/SimpleRoulette.vue'),
   },
+  {
+    path: '/timer',
+    name: 'Timer',
+    component: () => import('../views/other-tools/SimpleTimer.vue'),
+  },
 ];
 
 export const router = VueRouter.createRouter({

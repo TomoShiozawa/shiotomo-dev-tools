@@ -46,7 +46,10 @@ const devTools = [
   { label: 'Base Converter', to: { name: 'BaseConverter' } },
 ];
 
-const otherTools = [{ label: 'Roulette', to: { name: 'Roulette' } }];
+const otherTools = [
+  { label: 'Roulette', to: { name: 'Roulette' } },
+  { label: 'Timer', to: { name: 'Timer' } },
+];
 </script>
 
 <style scoped></style>
